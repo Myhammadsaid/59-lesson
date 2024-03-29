@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/media.css">
-    <link rel="stylesheet" href="../style/login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/media.css" />
+    <link rel="stylesheet" href="../style/login.css" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar container">
-            <h2 class="navbar__logo">API</h2>
-            <ul class="navbar__collection">
-                <li class="navbar__item">
-                    <a href="../index.html" class="navbar__link">Home</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="./wishes.html" class="navbar__link">Wishes</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#" class="navbar__link">Login</a>
-                </li>
-            </ul>
-        </nav>
+      <nav class="navbar container">
+        <h2 class="navbar__logo">API</h2>
+        <ul class="navbar__collection">
+          <li class="navbar__item">
+            <a href="../index.html" class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="./wishes.html" class="navbar__link">Wishes</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Login</a>
+          </li>
+        </ul>
+        <div class="navbar__menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <form action="" class="form">
-            <input type="text" class="form__username">
-            <input type="password" class="form__password">
-            <button>Log in</button>
-        </form>
+      <form action="" class="form">
+        <input type="text" class="form__username" />
+        <input type="password" class="form__password" />
+        <button>Log in</button>
+      </form>
     </main>
-    
-</body>
+    <script>
+      const navbarCollection = document.querySelector(".navbar__collection");
+      const navbarMenu = document.querySelector(".navbar__menu");
+
+      navbarMenu.addEventListener("click", () => {
+        navbarCollection.classList.toggle("show");
+      });
+    </script>
+  </body>
 </html>
